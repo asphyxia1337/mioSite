@@ -1,0 +1,206 @@
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta property="og:type" content="website">
+
+        <meta property="og:url" content="mioclient.me">
+        <meta property="og:title" content="Mio Client">
+        <meta property="og:description" content="Private minecraft crystal pvp utility.">
+        <meta property="og:image" content="logo.png">
+
+        <link href="resources/fonts/font.css" rel="stylesheet">
+
+        <link rel="icon" href="resources/logo.png">
+
+        <title>
+            Mio Client
+        </title>
+
+        <style>
+            * {
+                font-family: segoe;
+
+                cursor: url(cursor.png);
+
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            html,body {
+                background-color: #000;
+                overflow-y: scroll;
+            }
+
+            body::-webkit-scrollbar {
+                width: 0 !important; height: 0
+            }
+
+            .half{
+                height: 40vh;
+            }
+
+            #overlay {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                z-index: 100;
+                background-color: #000;
+            }
+
+            #overlay span {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+
+            #rect {
+                cursor: url(cursor.png);
+
+                z-index: 50;
+                position: fixed;
+                justify-content: center;
+                align-items: center;
+
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #main {
+                z-index: 50;
+                position: fixed;
+                justify-content: center;
+                align-items: center;
+
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #main * {
+                text-align: center;
+            }
+
+            section{
+                height: 75vh;
+
+                justify-content: center;
+                align-items: center;
+
+                scroll-snap-align: start;
+            }
+
+            .content {
+                scroll-snap-type: y mandatory;
+                color: white;
+                height: 100vh;
+            }
+
+            .ref {
+                cursor: pointer;
+            }
+
+            #video {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+            }
+
+            a {
+                color: #B586D4;
+                text-decoration: none;
+                transition: .5s;
+            }
+
+            a:hover {
+                color: #FC315D;
+                text-decoration: underline;
+                transition: .5s;
+            }
+
+            #ref {
+                font-size: 14pt;
+            }
+
+            #mio {
+                font-size: 46pt;
+                color: #B586D4;
+            }
+
+            #domain {
+                font-size: 46pt;
+                color: #FC315D;
+            }
+
+            video {
+                object-fit: cover;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <video id="video" autoplay loop>
+            <source src="resources/video.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            window.onload = () => {
+
+                video.onplay = () => {
+                    video.volume = 0.0;
+                    window.overlay.remove();
+                }
+            }
+        </script>
+
+        <div id="rect">
+            <img src="resources/rect.png" alt="" width="1920" height="200" border="0">
+        </div>
+
+        <div id="main">
+
+            <div class="content">
+
+                <section class="one">
+
+                    <span id="mio">mioclient</span>
+                    <span id="domain">.me</span><br>
+
+                    <div class="ref">
+
+                        <span id="ref">
+                            <a target="_blank" href="https://discord.gg/AbfTAwC9Rq">discord</a>
+                            <a target="_blank" href="https://savelife.in.ua/en/donate-en/#donate-army-card-monthly">purchase</a>
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div id="overlay" onclick="video.play();">
+            <span>[click to enter]</span>
+        </div>
+
+    </body>
+</html>
